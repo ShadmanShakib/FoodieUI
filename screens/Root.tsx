@@ -7,7 +7,11 @@ export default function Root() {
   const Stack = createStackNavigator();
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen
+        name="Home"
+        options={{ headerShown: false }}
+        component={Home}
+      />
     </Stack.Navigator>
   );
 }
