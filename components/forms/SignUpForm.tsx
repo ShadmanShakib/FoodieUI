@@ -7,10 +7,28 @@ interface ISignUpForm {
 export default function SignUpForm({ onPress }: ISignUpForm) {
   return (
     <Box>
-      <Text>Name:</Text>
-      <Input />
-      <Text>E-mail:</Text>
-      <Input />
+      <Input
+        px="0"
+        placeholder="Email address"
+        variant="unstyled"
+        borderRadius="0"
+        borderBottomWidth="2px"
+        borderBottomColor="black"
+        _focus={{ borderBottomColor: "primary.100" }}
+      />
+
+      <Input
+        mt="6"
+        px="0"
+        placeholder="Password"
+        mb="32"
+        type="password"
+        variant="unstyled"
+        borderRadius="0"
+        borderBottomWidth="2px"
+        borderBottomColor="black"
+        _focus={{ borderBottomColor: "primary.100" }}
+      />
       <PrimaryButton onPress={onPress} title="SIGN UP" />
     </Box>
   );
