@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Input, Text } from "native-base";
-import PrimaryButtion from "../../components/ui/PrimaryButton";
+import { PrimaryButton } from "../../components/ui";
 
 export default function Authentication({ navigation }: any) {
   return (
@@ -9,7 +9,7 @@ export default function Authentication({ navigation }: any) {
       <Input />
       <Text>Password:</Text>
       <Input />
-      <PrimaryButtion
+      <PrimaryButton
         title="SIGN IN"
         onPress={() => navigation.navigate("Root")}
       />

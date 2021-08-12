@@ -1,15 +1,74 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
-import { Home } from "../user";
 
+import { Favorite, Home, Profile, Cart } from "../user";
+import { Entypo, MaterialIcons, FontAwesome } from "@expo/vector-icons";
+
+type TypeBottomTabNavigation = {
+  Home: undefined;
+  Favorite: undefined;
+  Cart: undefined;
+  Profile: undefined;
+};
 export default function BottomTabNavigation() {
-  const Tab = createBottomTabNavigator();
+  const Tab = createBottomTabNavigator<TypeBottomTabNavigation>();
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName="Home">
       <Tab.Screen
-        options={{ headerShown: false }}
+        options={{
+          tabBarIcon: ({ color, focused }) => (
+            <Entypo
+              size={20}
+              name="home"
+              color={focused ? "#FA4A0C" : "gray"}
+            />
+          ),
+          headerShown: false,
+        }}
         name="Home"
         component={Home}
+      />
+      <Tab.Screen
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <MaterialIcons
+              size={20}
+              name="favorite"
+              color={focused ? "#FA4A0C" : "gray"}
+            />
+          ),
+          headerShown: false,
+        }}
+        component={Favorite}
+        name="Favorite"
+      />
+      <Tab.Screen
+        name="Cart"
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Entypo
+              size={20}
+              name="shopping-cart"
+              color={focused ? "#FA4A0C" : "gray"}
+            />
+          ),
+          headerShown: false,
+        }}
+        component={Cart}
+      />
+      <Tab.Screen
+        name="Profile"
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <FontAwesome
+              name="user"
+              size={20}
+              color={focused ? "#FA4A0C" : "gray"}
+            />
+          ),
+          headerShown: false,
+        }}
+        component={Profile}
       />
     </Tab.Navigator>
   );

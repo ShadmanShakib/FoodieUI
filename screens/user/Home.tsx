@@ -5,10 +5,11 @@ import {
   Input,
   HamburgerIcon,
   HStack,
-  Center,
   ScrollView,
   Spacer,
+  Pressable,
 } from "native-base";
+
 import { HomeFood } from "../../assets/images";
 import { Dishes } from "../../components/cards";
 
@@ -32,10 +33,15 @@ const TabMenu = (props: ITabMenu) => {
     </Box>
   );
 };
-export default function Home() {
+interface IHome {
+  navigation: any;
+}
+export default function Home({ navigation }: IHome) {
   return (
     <Box pt={10} pl={8}>
-      <HamburgerIcon h={5} mb={6} />
+      <Pressable onPress={() => navigation.openDrawer()}>
+        <HamburgerIcon h={6} />
+      </Pressable>
 
       <Text fontSize="2xl" w={40} mb={6} fontWeight="bold">
         Delicious Food for you

@@ -5,10 +5,10 @@ import { ImageSourcePropType } from "react-native";
 interface ICartItem {
   name: string;
   img: ImageSourcePropType;
-  price: number;
+  price: string;
 }
 
-export default function Cart(props: ICartItem) {
+export default function CartItem(props: ICartItem) {
   const { name, img, price } = props;
   const [count, setCount] = React.useState(1);
   return (

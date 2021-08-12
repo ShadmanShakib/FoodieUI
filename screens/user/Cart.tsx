@@ -10,7 +10,7 @@ export default function Cart() {
         Cart
       </Text>
       <Box>
-        <CartItem price={9.99} name="Vaggie Tomato Mix" img={Food1} />
+        <CartItem price="9.99" name="Vaggie Tomato Mix" img={Food1} />
       </Box>
       <Box position="absolute" w="100%" bottom={2}>
         <PrimaryButton title="Checkout" />
