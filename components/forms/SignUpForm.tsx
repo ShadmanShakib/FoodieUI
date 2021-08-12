@@ -1,10 +1,8 @@
 import React from "react";
 import { Box, Text, Input } from "native-base";
 import { PrimaryButton } from "../ui";
-interface ISignUpForm {
-  onPress?: () => void;
-}
-export default function SignUpForm({ onPress }: ISignUpForm) {
+
+export default function SignUpForm() {
   return (
     <Box>
       <Input
@@ -21,7 +19,6 @@ export default function SignUpForm({ onPress }: ISignUpForm) {
         mt="6"
         px="0"
         placeholder="Password"
-        mb="32"
         type="password"
         variant="unstyled"
         borderRadius="0"
@@ -29,7 +26,6 @@ export default function SignUpForm({ onPress }: ISignUpForm) {
         borderBottomColor="black"
         _focus={{ borderBottomColor: "primary.100" }}
       />
-      <PrimaryButton onPress={onPress} title="SIGN UP" />
     </Box>
   );
 }

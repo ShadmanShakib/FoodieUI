@@ -16,6 +16,7 @@ export default function BottomTabNavigation() {
     <Tab.Navigator initialRouteName="Home">
       <Tab.Screen
         options={{
+          tabBarShowLabel: false,
           tabBarIcon: ({ color, focused }) => (
             <Entypo
               size={20}
@@ -30,6 +31,7 @@ export default function BottomTabNavigation() {
       />
       <Tab.Screen
         options={{
+          tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
             <MaterialIcons
               size={20}
@@ -45,6 +47,7 @@ export default function BottomTabNavigation() {
       <Tab.Screen
         name="Cart"
         options={{
+          tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
             <Entypo
               size={20}
@@ -59,6 +62,7 @@ export default function BottomTabNavigation() {
       <Tab.Screen
         name="Profile"
         options={{
+          tabBarShowLabel: false,
           tabBarIcon: ({ focused }) => (
             <FontAwesome
               name="user"

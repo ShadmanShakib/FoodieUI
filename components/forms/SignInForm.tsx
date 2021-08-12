@@ -1,12 +1,8 @@
 import React from "react";
-import { Box, Text, Input } from "native-base";
+import { Box, Input } from "native-base";
 import { PrimaryButton } from "../ui";
-import { TextInput } from "react-native";
 
-interface ISignInForm {
-  onPress?: () => void;
-}
-export default function SignInForm({ onPress }: ISignInForm) {
+export default function SignInForm() {
   return (
     <Box>
       <Input
@@ -23,7 +19,6 @@ export default function SignInForm({ onPress }: ISignInForm) {
         mt="6"
         px="0"
         placeholder="Password"
-        mb="32"
         type="password"
         variant="unstyled"
         borderRadius="0"
@@ -31,8 +26,6 @@ export default function SignInForm({ onPress }: ISignInForm) {
         borderBottomColor="black"
         _focus={{ borderBottomColor: "primary.100" }}
       />
-
-      <PrimaryButton onPress={onPress} title="SIGN IN" />
     </Box>
   );
 }

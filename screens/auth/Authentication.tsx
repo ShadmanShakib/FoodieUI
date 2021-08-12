@@ -3,6 +3,7 @@ import { Box, Text, Image, Pressable, HStack, Flex } from "native-base";
 import { SignInForm } from "../../components/forms";
 import { Logo } from "../../assets/images";
 import SignUpForm from "../../components/forms/SignUpForm";
+import { PrimaryButton } from "../../components/ui";
 
 export default function Authentication({ navigation }: any) {
   const [registerd, setRegisterd] = React.useState(true);
@@ -13,7 +14,7 @@ export default function Authentication({ navigation }: any) {
 
   return (
     <Box h="100%">
-      <Box bg="white" shadow={20} borderBottomRadius={20}>
+      <Box w="100%" bg="white" shadow={20} borderBottomRadius={20}>
         <Flex
           direction="row"
           justifyContent="center"
@@ -40,12 +41,15 @@ export default function Authentication({ navigation }: any) {
       </Box>
 
       {/* Forms */}
-      <Box mt="10" px="6">
-        {registerd ? (
-          <SignInForm onPress={() => navigation.navigate("Root")} />
-        ) : (
-          <SignUpForm />
-        )}
+      <Box position="absolute" px="6" w="100%" bottom="48">
+        {registerd ? <SignInForm /> : <SignUpForm />}
+      </Box>
+
+      <Box pos="absolute" px="6" w="100%" bottom="2">
+        <PrimaryButton
+          onPress={() => navigation.navigate("Root")}
+          title={registerd ? "SIGN IN" : "SIGN UP"}
+        />
       </Box>
     </Box>
   );
