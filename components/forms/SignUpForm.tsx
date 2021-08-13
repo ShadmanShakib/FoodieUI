@@ -7,7 +7,7 @@ export default function SignUpForm() {
     <Box>
       <Input
         px="0"
-        placeholder="Email address"
+        placeholder="Your Name"
         variant="unstyled"
         borderRadius="0"
         borderBottomWidth="2px"
@@ -18,8 +18,7 @@ export default function SignUpForm() {
       <Input
         mt="6"
         px="0"
-        placeholder="Password"
-        type="password"
+        placeholder="Email Address"
         variant="unstyled"
         borderRadius="0"
         borderBottomWidth="2px"

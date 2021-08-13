@@ -1,14 +1,20 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import React from "react";
 
-import { Favorite, Home, Profile, Cart } from "../user";
-import { Entypo, MaterialIcons, FontAwesome } from "@expo/vector-icons";
+import { Favorite, Home, Profile, Cart, Discount } from "../user";
+import {
+  Entypo,
+  MaterialIcons,
+  FontAwesome,
+  AntDesign,
+} from "@expo/vector-icons";
 
 type TypeBottomTabNavigation = {
   Home: undefined;
   Favorite: undefined;
   Cart: undefined;
   Profile: undefined;
+  Discount: undefined;
 };
 export default function BottomTabNavigation() {
   const Tab = createBottomTabNavigator<TypeBottomTabNavigation>();
@@ -43,6 +49,21 @@ export default function BottomTabNavigation() {
         }}
         component={Favorite}
         name="Favorite"
+      />
+      <Tab.Screen
+        name="Discount"
+        options={{
+          headerShown: false,
+          tabBarShowLabel: false,
+          tabBarIcon: ({ focused }) => (
+            <AntDesign
+              name="gift"
+              size={32}
+              color={focused ? "#FA4A0C" : "gray"}
+            />
+          ),
+        }}
+        component={Discount}
       />
       <Tab.Screen
         name="Cart"

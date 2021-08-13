@@ -10,8 +10,13 @@ export default {
           Feed: {
             screens: {
               Home: "home",
+              Favorite: "favorite",
+              Cart: "cart",
+              Profile: "profile",
+              Discount: "discount",
             },
           },
+          Order: "order",
         },
       },
     },
