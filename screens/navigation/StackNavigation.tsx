@@ -4,18 +4,13 @@ import DrawerNavigation from "./DrawerNavigation";
 import { createStackNavigator } from "@react-navigation/stack";
 import NotFoundScreen from "../NotFoundScreen";
 import { Text } from "native-base";
+import { SingleDish } from "../dishes";
 
 type IStackNavigationRoutes = {
   Auth: undefined;
-  Root:
-    | undefined
-    | {
-        Feed: {
-          Home: undefined;
-          Favorite: undefined;
-        };
-      };
+  Root: undefined;
   NotFound: undefined;
+  SingleDish: undefined;
 };
 
 export default function StackNavigation() {
@@ -32,6 +27,7 @@ export default function StackNavigation() {
         name="Root"
         component={DrawerNavigation}
       />
+      <Stack.Screen component={SingleDish} name="SingleDish" options={{}} />
     </Stack.Navigator>
   );
 }

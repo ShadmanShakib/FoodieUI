@@ -5,6 +5,7 @@ export default {
   config: {
     screens: {
       Auth: "auth",
+      SingleDish: "singledish",
       Root: {
         screens: {
           Feed: {

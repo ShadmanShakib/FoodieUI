@@ -56,7 +56,12 @@ export default function Home({ navigation }: IHome) {
         </HStack>
       </Box>
       <ScrollView py={2} horizontal={true}>
-        <Dishes name="Vaggie Tomato mix" source={HomeFood} price={9.99} />
+        <Dishes
+          onPress={() => navigation.navigate("SingleDish")}
+          name="Vaggie Tomato mix"
+          source={HomeFood}
+          price={9.99}
+        />
         <Spacer w={4} />
         <Dishes name="Vaggie Tomato mix" source={HomeFood} price={9.99} />
         <Spacer w={4} />

@@ -5,7 +5,9 @@ import { Box, Text } from "native-base";
 export default function Order({ navigation }: any) {
   return (
     <Box minH="100%">
-      <Topbar title="ORDERS" onPress={() => navigation.openDrawer()} />
+      <Box>
+        <Topbar title="ORDERS" onPress={() => navigation.openDrawer()} />
+      </Box>
     </Box>
   );
 }
