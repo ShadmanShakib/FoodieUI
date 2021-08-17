@@ -8,7 +8,7 @@ interface ITopBar {
 }
 export default function TopBar(props: ITopBar) {
   return (
-    <Box px="6" bg="white" h="12">
+    <Box shadow={6} pt="8" px="6" bg="white" h="20">
       <HStack
         direction="row"
         h="12"

@@ -30,8 +30,14 @@ export default function Profile() {
       </HStack>
       <Box bg="white" mb={6} p="2" rounded="xl">
         <HStack>
-          <Image h={20} w={20} source={ProfilePic} alt="Profile Pic" />
-          <Flex justify="center">
+          <Image
+            rounded="sm"
+            h={20}
+            w={20}
+            source={ProfilePic}
+            alt="Profile Pic"
+          />
+          <Flex ml="3" justify="center">
             <Text>Shadman Shakib</Text>
             <Text>sm.shakib@gmail.com</Text>
             <Text>Dhaka,Bangladesh</Text>

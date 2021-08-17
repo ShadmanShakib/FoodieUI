@@ -27,7 +27,11 @@ export default function StackNavigation() {
         name="Root"
         component={DrawerNavigation}
       />
-      <Stack.Screen component={SingleDish} name="SingleDish" options={{}} />
+      <Stack.Screen
+        component={SingleDish}
+        name="SingleDish"
+        options={{ title: "Vaggie Tomato Mix", headerTitleAlign: "center" }}
+      />
     </Stack.Navigator>
   );
 }
